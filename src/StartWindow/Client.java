@@ -17,4 +17,10 @@ public class Client {
         incomingMessage = new DataInputStream(client.getInputStream());
         outgoingMessage = new DataOutputStream(client.getOutputStream());
     }
+
+    public void closeConnections() throws IOException {
+        client.close();
+        incomingMessage.close();
+        outgoingMessage.close();
+    }
 }
