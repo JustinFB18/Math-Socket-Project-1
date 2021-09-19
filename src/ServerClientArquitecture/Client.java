@@ -1,4 +1,4 @@
-package StartWindow;
+package ServerClientArquitecture;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
