@@ -1,28 +1,27 @@
 package StartWindow;
 
-import com.sun.javafx.runtime.VersionInfo;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextInputDialog;
-import javafx.scene.layout.TilePane;
 import javafx.stage.Stage;
+
+import java.net.URL;
 
 public class Main extends Application {
 
-    /*@Override
+    @Override
     public void start(Stage primaryStage) throws Exception{
-        System.out.println("JavaFX Version: " + System.getProperty("javafx.version"));
-        System.out.println("JavaFX Runtime Version: " + System.getProperty("javafx.runtime.version"));
-        Parent root = FXMLLoader.load(getClass().getResource("StartWindow.fxml"));
+        FXMLLoader loader = new FXMLLoader();
+        URL location= getClass().getResource("StartWindow.fxml");
+        loader.setLocation(location);
+        loader.setController(new ControllerPlayerOne());
         primaryStage.setTitle("Math Socket - Welcome");
+        Parent root = loader.load();
         primaryStage.setScene(new Scene(root, 500, 450));
         primaryStage.show();
-    }*/
+    }
+    /*
     @Override
     public void start(Stage s){
         // set title for the stage
@@ -64,6 +63,7 @@ public class Main extends Application {
         s.show();
     }
 
+     */
 
     public static void main(String[] args) {
         launch(args);
