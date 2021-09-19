@@ -1,4 +1,4 @@
-package StartWindow;
+package ServerClientArquitecture;
 
 import java.io.IOException;
 import java.net.ServerSocket;
