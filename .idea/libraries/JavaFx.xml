@@ -1,10 +1,10 @@
 <component name="libraryTable">
   <library name="JavaFx">
     <CLASSES>
-      <root url="file://$USER_HOME$/.jdks/openjdk-16.0.2/lib/JavaFx" />
+      <root url="file://$USER_HOME$/.openjfx/JavaFx" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
-    <jarDirectory url="file://$USER_HOME$/.jdks/openjdk-16.0.2/lib/JavaFx" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/.openjfx/JavaFx" recursive="false" />
   </library>
 </component>
