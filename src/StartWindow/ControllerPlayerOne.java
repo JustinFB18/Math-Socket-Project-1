@@ -1,6 +1,7 @@
 package StartWindow;
 
 import GameWindow.GameController;
+import GameWindow.MainGameWindow;
 import ServerClientArquitecture.Client;
 import ServerClientArquitecture.Server;
 import javafx.event.ActionEvent;
@@ -16,8 +17,8 @@ import java.net.URL;
 
 public class ControllerPlayerOne extends MainController{
     private boolean state = false;
+    public Stage stage;
     Server s;
-
 
     @FXML
     public void initialize() throws IOException {
@@ -53,7 +54,10 @@ public class ControllerPlayerOne extends MainController{
         System.out.println("jugador: "+Client.isState());
         System.out.println("Server: "+ GetName());
         if (ClientList()){
-            Stage primaryStage = new Stage();
+            stage = (Stage) playButton.getScene().getWindow();
+            stage.close();
+            MainGameWindow.main();
+            /*Stage primaryStage = new Stage();
             FXMLLoader loader = new FXMLLoader();
             URL location= getClass().getResource("/GameWindow/Game.fxml");
             loader.setLocation(location);
@@ -61,7 +65,7 @@ public class ControllerPlayerOne extends MainController{
             primaryStage.setTitle("Math Socket");
             Parent root = loader.load();
             primaryStage.setScene(new Scene(root, 600, 500));
-            primaryStage.show();
+            primaryStage.show();*/
         }
     }
 

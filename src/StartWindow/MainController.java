@@ -4,6 +4,7 @@ import GameWindow.MainGameWindow;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextInputDialog;
 import javafx.scene.layout.TilePane;
@@ -13,8 +14,12 @@ import java.io.IOException;
 
 public class MainController {
     @FXML
+    public Button playButton;
+    @FXML
     private TextField namePlayerTxt;
     String name = "";
+
+
     public void jugar(ActionEvent e) throws IOException {
         name = namePlayerTxt.getText();
         // create a tile pane
