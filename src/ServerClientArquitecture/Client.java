@@ -12,6 +12,7 @@ public class Client {
     private static DataOutputStream outgoingMessage;
     private static Socket client;
     private static Client instance;
+    public static boolean state = false;
 
     private Client() {
     }
@@ -25,6 +26,7 @@ public class Client {
 
     public static void createClient() throws IOException {
         client = new Socket(HOST,PORT);
+        state = true;
         incomingMessage = new DataInputStream(client.getInputStream());
         outgoingMessage = new DataOutputStream(client.getOutputStream());
     }
@@ -38,5 +40,9 @@ public class Client {
     public static void main(String[] args) throws IOException {
         Client c = new Client();
         c.createClient();
+    }
+
+    public static boolean isState() {
+        return state;
     }
 }
