@@ -2,13 +2,28 @@ package GameWindow;
 
 import java.util.Random;
 
+/**
+ * The CasillaTrampa Class that creates only one instance of the class and allows to know how many boxes to move back.
+ *
+ * @author Justin Fern&aacute;ndez y Abraham Venegas
+ * @version 1
+ */
 public class CasillaTrampa {
     private static Random random;
     private CasillaTrampa instance;
+
+    /**
+     * This is the constructor method of the class, initialize the randon var to a new Random Object.
+     */
     private CasillaTrampa(){
         Random random = new Random();
     }
 
+    /**
+     * This method verificates if exists any instance of the class, and return the existing one if there is
+     * or create one to return it.
+     * @return instance the object to get access to the method to throw dice.
+     */
     public CasillaTrampa getInstance() {
         if (instance == null){
             instance = new CasillaTrampa();
@@ -16,6 +31,10 @@ public class CasillaTrampa {
         return instance;
     }
 
+    /**
+     * Shows the number of boxes to move back
+     * @return a number of boxes to move back
+     */
     public static int camposPorRegresar(){
         return random.nextInt(3)+1;
     }

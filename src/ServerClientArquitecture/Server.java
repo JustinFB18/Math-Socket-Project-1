@@ -4,6 +4,13 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+
+/**
+ * The Server Class that allows to receives clients in the server
+ *
+ * @author Justin Fern&aacute;ndez y Abraham Venegas
+ * @version 1
+ */
 public class Server {
     private final int PORT = 8080;
     private ServerSocket serverSystem;
