@@ -69,4 +69,36 @@ public class DoubleList {
             System.out.print(intElement+" ");
             current = actual.next;}
     }
+
+    public void moveForward(int Campos){
+        for (int j = 0; j < Campos; j++){
+            Node current = this.head;
+            if (current.next != null){
+                this.head = current.next;
+            }
+        }
+        System.out.println(this.head.data);
+    }
+
+    public void moveBack(int Campos){
+        for (int j = 0; j < Campos; j++){
+            Node current = this.head;
+            if (current.next != null){
+                this.head = current.prev;
+            }
+        }
+        System.out.println(this.head.data);
+    }
+
+    public static void main(String[] args) {
+        DoubleList d = new DoubleList();
+
+        for(int i =0; i<16;i++){
+            d.insertAtEnd(i);
+        }
+        d.printList(d);
+        System.out.println(d.head.data);
+        d.moveForward(3);
+        d.moveBack(2);
+    }
 }
