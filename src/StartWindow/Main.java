@@ -18,7 +18,7 @@ public class Main extends Application {
         loader.setController(new ControllerPlayerOne());
         primaryStage.setTitle("Math Socket - Welcome");
         Parent root = loader.load();
-        primaryStage.setScene(new Scene(root, 500, 450));
+        primaryStage.setScene(new Scene(root, 500, 400));
         primaryStage.show();
 
         Stage primaryStage2 = new Stage();
@@ -28,7 +28,7 @@ public class Main extends Application {
         loader2.setController(new ControllerPlayerTwo());
         primaryStage2.setTitle("Math Socket - Welcome");
         Parent root2 = loader2.load();
-        primaryStage2.setScene(new Scene(root2, 500, 450));
+        primaryStage2.setScene(new Scene(root2, 500, 400));
         primaryStage2.show();
     }
     /*
