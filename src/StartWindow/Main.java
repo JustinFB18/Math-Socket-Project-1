@@ -20,6 +20,16 @@ public class Main extends Application {
         Parent root = loader.load();
         primaryStage.setScene(new Scene(root, 500, 450));
         primaryStage.show();
+
+        Stage primaryStage2 = new Stage();
+        FXMLLoader loader2 = new FXMLLoader();
+        URL location2= getClass().getResource("StartWindow.fxml");
+        loader2.setLocation(location2);
+        loader2.setController(new ControllerPlayerTwo());
+        primaryStage2.setTitle("Math Socket - Welcome");
+        Parent root2 = loader2.load();
+        primaryStage2.setScene(new Scene(root2, 500, 450));
+        primaryStage2.show();
     }
     /*
     @Override
