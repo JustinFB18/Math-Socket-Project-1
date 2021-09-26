@@ -3,9 +3,12 @@ package GameWindow;
 import StartWindow.ControllerPlayerOne;
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 import javafx.stage.Stage;
 
@@ -23,7 +26,7 @@ public class MainGameWindow {
         loader.setController(new GameController());
         primaryStage.setTitle("Math Socket - Game");
         Parent root = loader.load();
-        primaryStage.setScene(new Scene(root, 600, 450));
+        primaryStage.setScene(new Scene(root, 700, 450));
         int[] casillas = casillasAleatorias();
         System.out.println(casillas[0]+" "+casillas[1]+" "+casillas[2]);
         primaryStage.show();
@@ -38,8 +41,9 @@ public class MainGameWindow {
                 break;
             }
         }
-        int casillasTunel = random.nextInt((16-casillasReto)/2)+1;
-        int casillasTrampa = 16-casillasReto-casillasTunel;
+        //14 porque la primera y última casilla están vacías
+        int casillasTunel = random.nextInt((14-casillasReto)/2)+1;
+        int casillasTrampa = 14-casillasReto-casillasTunel;
         int[] casillas = new int[]{casillasReto, casillasTrampa, casillasTunel};
         return casillas;
     }
