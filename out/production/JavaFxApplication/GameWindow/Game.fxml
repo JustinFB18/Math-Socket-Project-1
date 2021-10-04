@@ -171,6 +171,18 @@
             <Label layoutX="532.0" layoutY="154.0" text="Reto" />
             <Label layoutX="530.0" layoutY="192.0" text="Túnel" />
             <Label layoutX="531.0" layoutY="226.0" text="Trampa" />
+            <Label layoutX="67.0" layoutY="16.0" text="Jugador 1 (Circulo)">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="342.0" layoutY="16.0" text="Jugador 2 (Rectángulo)">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Circle fill="#ffb01f" layoutX="104.0" layoutY="82.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5f1fff" height="37.0" layoutX="131.0" layoutY="63.0" stroke="BLACK" strokeType="INSIDE" width="40.0" />
          </children></Pane>
    </children>
 </GridPane>
