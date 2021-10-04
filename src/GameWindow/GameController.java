@@ -22,7 +22,7 @@ public class GameController {
     public void initialize() {
         // The first triangle
         /*Polygon trianguloInicio = new Polygon(new double[]{-50.0, 40.0, 50.0, 40.0, 0.0, -60.0});
-        trianguloInicio.setLayoutX(104);
+        trianguloInicio.setLayoutX(100);
         trianguloInicio.setLayoutY(92);
         trianguloInicio.setFill(Color.BEIGE);
         trianguloInicio.setRotate(90);
@@ -62,6 +62,7 @@ public class GameController {
         triangulo4.setRotate(180);
         triangulo4.setScaleX(scaleX);
         triangulo4.setScaleY(scaleY);
+
         // Second row triangles
 
         Polygon triangulo5 = new Polygon(new double[]{-50.0, 40.0, 50.0, 40.0, 0.0, -60.0});
