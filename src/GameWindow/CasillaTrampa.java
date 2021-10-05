@@ -5,7 +5,7 @@ import java.util.Random;
 /**
  * The CasillaTrampa Class that creates only one instance of the class and allows to know how many boxes to move back.
  *
- * @author Justin Fern&aacute;ndez y Abraham Venegas
+ * @author Justin Fern&aacute;ndez and Abraham Venegas
  * @version 1
  */
 public class CasillaTrampa {
@@ -13,7 +13,7 @@ public class CasillaTrampa {
     private CasillaTrampa instance;
 
     /**
-     * This is the constructor method of the class, initialize the randon var to a new Random Object.
+     * This is the constructor method of the class, initialize the random var to a new Random Object.
      */
     private CasillaTrampa(){
         Random random = new Random();

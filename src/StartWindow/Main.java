@@ -31,6 +31,7 @@ public class Main extends Application {
         primaryStage2.setScene(new Scene(root2, 500, 400));
         primaryStage2.show();
     }
+
     /*
     @Override
     public void start(Stage s){

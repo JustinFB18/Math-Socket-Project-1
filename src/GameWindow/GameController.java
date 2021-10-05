@@ -23,11 +23,11 @@ public class GameController {
         // The first triangle
         /*Polygon trianguloInicio = new Polygon(new double[]{-50.0, 40.0, 50.0, 40.0, 0.0, -60.0});
         trianguloInicio.setLayoutX(100);
-        trianguloInicio.setLayoutY(92);
-        trianguloInicio.setFill(Color.BEIGE);
-        trianguloInicio.setRotate(90);
+        trianguloInicio.setLayoutY(92);  // position
+        trianguloInicio.setFill(Color.BEIGE);  // color
+        trianguloInicio.setRotate(90);  // rotation
         trianguloInicio.setScaleX(scaleX);
-        trianguloInicio.setScaleY(scaleY);
+        trianguloInicio.setScaleY(scaleY);  // and scale
 
         // The last triangle
         Polygon trianguloFinal = new Polygon(new double[]{-50.0, 40.0, 50.0, 40.0, 0.0, -60.0});
