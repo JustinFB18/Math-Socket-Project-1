@@ -41,7 +41,7 @@ public class MainGameWindow {
                 break;
             }
         }
-        //14 porque la primera y última casilla están vacías
+        //14 because the first and the last are almost empty
         int casillasTunel = random.nextInt((14-casillasReto)/2)+1;
         int casillasTrampa = 14-casillasReto-casillasTunel;
         int[] casillas = new int[]{casillasReto, casillasTrampa, casillasTunel};
