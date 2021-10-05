@@ -2,11 +2,15 @@ package GameWindow;
 
 import javafx.fxml.FXML;
 import javafx.scene.Group;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextInputDialog;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.TilePane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
+import javafx.stage.Stage;
 
 public class GameController {
     @FXML
@@ -20,6 +24,8 @@ public class GameController {
 
     @FXML
     public void initialize() {
+        CasillasAleatorias c = new CasillasAleatorias();
+        c.create(MainPane);
         // The first triangle
         /*Polygon trianguloInicio = new Polygon(new double[]{-50.0, 40.0, 50.0, 40.0, 0.0, -60.0});
         trianguloInicio.setLayoutX(100);
@@ -177,5 +183,29 @@ public class GameController {
         Dado dado = Dado.getInstance();
         int valor = dado.tirarDado();
         valorDado.setText(String.valueOf(valor));
+        if (valor == 2){
+            TilePane r = new TilePane();
+            Stage s = new Stage();
+            s.setTitle("creating textInput dialog");
+            TextInputDialog td = new TextInputDialog();
+            CasillaReto reto = new CasillaReto();
+            String operacion = reto.mostrarReto();
+            String resultado = reto.getResultado();
+            td.setHeaderText("Ingrese el resultado de la siguiente operación: "+operacion);
+            Button d = new Button("click");
+            r.getChildren().add(d);
+            td.showAndWait();
+            String a = td.getEditor().getText();
+            Alert res = new Alert(Alert.AlertType.INFORMATION);
+            res.setHeaderText(null);
+            if (a.equals(resultado)){
+                res.setTitle("Respuesta Correcta");
+                res.setContentText("Su respuesta es CORRECTA");
+            }else{
+                res.setTitle("Respuesta Incorrecta");
+                res.setContentText("Su respuesta es INCORRECTA");
+            }
+            res.showAndWait();
+        }
     }
 }

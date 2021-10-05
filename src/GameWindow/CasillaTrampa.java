@@ -1,5 +1,7 @@
 package GameWindow;
 
+import javafx.scene.shape.Polygon;
+
 import java.util.Random;
 
 /**
@@ -8,14 +10,14 @@ import java.util.Random;
  * @author Justin Fern&aacute;ndez and Abraham Venegas
  * @version 1
  */
-public class CasillaTrampa {
+public class CasillaTrampa extends Polygon {
     private static Random random;
-    private CasillaTrampa instance;
+    private static CasillaTrampa instance;
 
     /**
      * This is the constructor method of the class, initialize the random var to a new Random Object.
      */
-    private CasillaTrampa(){
+    public CasillaTrampa(){
         Random random = new Random();
     }
 
@@ -24,7 +26,7 @@ public class CasillaTrampa {
      * or create one to return it.
      * @return instance the object to get access to the method to throw dice.
      */
-    public CasillaTrampa getInstance() {
+    public static CasillaTrampa getInstance() {
         if (instance == null){
             instance = new CasillaTrampa();
         }

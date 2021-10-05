@@ -1,6 +1,7 @@
 package GameWindow;
 
 import ServerClientArquitecture.Client;
+import javafx.scene.shape.Polygon;
 
 import java.util.Random;
 
@@ -10,13 +11,13 @@ import java.util.Random;
  * @author Justin Fern&aacute;ndez y Abraham Venegas
  * @version 1
  */
-public class CasillaTunel {
-    private CasillaTunel instance;
+public class CasillaTunel extends Polygon {
+    private static CasillaTunel instance;
     private static Random random;
     /**
-     * This is the constructor method of the class, initialize the randon var to a new Random Object.
+     * This is the constructor method of the class, initialize the random var to a new Random Object.
      */
-    private CasillaTunel(){
+    public CasillaTunel(){
         Random random = new Random();
     }
 
@@ -25,7 +26,7 @@ public class CasillaTunel {
      * or create one to return it.
      * @return instance the object to get access to the method to throw dice.
      */
-    public CasillaTunel getInstance() {
+    public static CasillaTunel getInstance() {
         if (instance == null){
             instance = new CasillaTunel();
         }

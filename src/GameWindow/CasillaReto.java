@@ -1,5 +1,7 @@
 package GameWindow;
 
+import javafx.scene.shape.Polygon;
+
 import java.util.Random;
 
 
@@ -9,15 +11,17 @@ import java.util.Random;
  * @author Justin Fern&aacute;ndez y Abraham Venegas
  * @version 1
  */
-public class CasillaReto {
+public class CasillaReto extends Polygon {
     Random random;
     private static CasillaReto instance;
+    public String resultado;
 
     /**
-     * This is the constructor method of the class, initialize the randon var to a new Random Object.
+     * This is the constructor method of the class, initialize the random var to a new Random Object.
      */
-    private CasillaReto(){
+    public CasillaReto(){
         random = new Random();
+        this.resultado = "";
     }
 
     /**
@@ -34,8 +38,9 @@ public class CasillaReto {
 
     /**
      * Shows the challenge for other player
+     * @return
      */
-    public void mostrarReto(){
+    public String mostrarReto(){
         double resultado = 0;
         String[] operaciones = new String[] {"+","-","/","*"};
         // The range is from 0 to 51, excluding 51
@@ -46,6 +51,7 @@ public class CasillaReto {
         // Chooses the operation to do randomly
         String operadorPorRealizar = operaciones[operacion];
         System.out.println("Realice: "+x+operadorPorRealizar+y);
+        String opera = ""+x+operadorPorRealizar+y;
         if (operadorPorRealizar.equals("+")){
             resultado = x + y;
         } else if(operadorPorRealizar.equals("-")){
@@ -55,7 +61,14 @@ public class CasillaReto {
         } else{
             resultado = x*y;
         }
+        resultado = Math.round(resultado*10)/10;
+        this.resultado += resultado;
         System.out.println("resultado = " + resultado);
+        return opera;
+    }
+
+    public String getResultado() {
+        return resultado;
     }
 
     public static void main(String[] args) {
